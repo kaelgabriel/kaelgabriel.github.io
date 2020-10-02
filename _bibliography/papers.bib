@@ -1,7 +1,31 @@
 ---
 ---
 
+
 @string{aps = {American Physical Society,}}
+
+
+@article{barros_iros_2020,
+  abbr={IROS},
+  title={Soft Actor Critic for Drone low-level control},
+  author={Barros, Gabriel Moraes, and Colombini, Esther },
+  year={2020},
+  publisher={[sn]},
+  journal={IROS - workshop "Perception, Learning, and Control for Autonomous Agile Vehicles"},
+}
+
+
+
+@article{barros_dissertation_2020,
+  title={Reinforcement and Imitation Learning Applied to Autonomous Aerial Robot Control},
+  author={Barros, Gabriel Moraes},
+  year={2020},
+  publisher={[sn]},
+  abstract={ In robotics, the ultimate goal of reinforcement learning is to endow robots with the ability to learn, improve, adapt, and reproduce tasks with dynamically changing constraints based on exploration and autonomous learning. Reinforcement Learning (RL) aims at addressing this problem by enabling a robot to learn behaviors through trial-and-error. With RL, a Neural Network can be trained as a function approximator to directly map states to actuator commands making any predefined control structure not-needed for training. However, the knowledge required to converge these methods are usually built from scratch, learning may take a long time, not to mention that RL algorithms need a stated reward function and sometimes it is not trivial to define one. Often it is easier for a teacher, human or intelligent agent, do demonstrate the desired behavior or how to accomplish a given task. Humans and other animals have a natural ability to learn skills from observation, often from merely seeing the effects of these skills: without direct knowledge of the underlying actions being taken. The same principle exists in Imitation Learning, a practical approach for autonomous systems to acquire control policies when an explicit reward function is unavailable, using supervision provided as demonstrations from an expert, typically a human operator. In this scenario, the primary objective of this work is to design an agent that can successfully imitate a prior acquired control policy using Imitation Learning. The chosen algorithm is GAIL since we consider that it is the proper algorithm to tackle this problem by utilizing expert (state, action) trajectories. As reference expert trajectories, we implement state-of-the-art on and off-policy methods PPO and SAC. Results show that the learned policies for all three methods can solve the task of low-level control of a quadrotor and that all can account for generalization on the original tasks},
+  journal={Master's Dissertation},
+  url={http://repositorio.unicamp.br/handle/REPOSIP/345879},
+  pdf={http://repositorio.unicamp.br/bitstream/REPOSIP/345879/1/Barros_GabrielMoraes_M.pdf},
+}
 
 @book{einstein1956investigations,
   title={Investigations on the Theory of the Brownian Movement},
@@ -38,7 +62,7 @@
   doi={10.1103/PhysRev.47.777},
   url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
   html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
+  pdf={example_pdf.pdf},  
   selected={true}
 }
 
