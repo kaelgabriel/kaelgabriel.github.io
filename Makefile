@@ -12,21 +12,21 @@ serve:
 
 build:
 	sudo docker run -it --rm \
-  -v "$(PWD):/home/appuser/myapp" -p 4000:4000 \
- -v "$(PWD)/vendor/bundle:/usr/local/bundle" \
-  --name $(CONTAINER_NAME) \
-	jekyll-docker bundle exec jekyll build
+  -v "$(PWD):/home/appuser/myapp" \
+  --name $(CONTAINER_NAME) jekyll-docker jekyll build
 
-COMMAND="cat _pages/about.md"
-COMMAND=cat _sass/_variables.scss
-COMMAND=bundle exec
-COMMAND=cat /home/appuser/myapp/_config.yml
+
+  # -v "$(PWD)/vendor/bundle:/usr/local/bundle" \
+# 
+
+COMMAND=jekyll build
 check:
-
 	sudo docker run -it --rm \
-   -v "$(PWD):/home/appuser/myapp" -p 4000:4000 \
-   -v "$(PWD)/vendor/bundle:/usr/local/bundle" \
-   --name $(CONTAINER_NAME) jekyll-docker $(COMMAND)
+  -v "$(PWD):/home/appuser/myapp" -p 4000:4000 \
+  --name $(CONTAINER_NAME) \
+	jekyll-docker $(COMMAND)
+
+
 
 image:
 	sudo docker build --tag jekyll-docker .

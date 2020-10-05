@@ -4,7 +4,7 @@ permalink: /publications/
 title: Publications
 description: 
 # years: [2020,2019,2018,2017]
-years: [2020,1956, 1950, 1935, 1905]
+years: [2020,2017, 2015]
 nav: true
 ---
 
