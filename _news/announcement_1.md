@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2020-09-20 12:00:00-0000
 inline: true
 ---
 
-A simple inline announcement.
+Our paper "Using Soft Actor-Critic for Low-Level UAV Control" was accepted in the IROS 2020 workshop "Perception, Learning, and Control for Autonomous Agile Vehicles"!

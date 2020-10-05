@@ -12,6 +12,9 @@ $ make build
 $ make serve
 ```
 
+Comment this line at _includes/social.html for the mail envelope:
+  <!-- <a href="mailto:{{ site.email | encode_email }}"><i class="fas fa-envelope"></i></a> -->
+
 
 ## al-folio
 
