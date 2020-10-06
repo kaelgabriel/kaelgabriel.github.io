@@ -36,19 +36,25 @@ git checkout -b $DEPLOY_BRANCH
 
 # # Delete and move files
 # find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name 'CNAME' ! -name '.gitignore' -exec rm -rf {} \;
-find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name 'CNAME' ! -name '.gitignore' ! -name '.' -exec echo "{}" \;
-printf "\n\n\n\n\n"
+# find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name 'CNAME' ! -name '.gitignore' ! -name '.' -exec echo "{}" \;
+# printf "\n\n\n\n\n"
 find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name 'CNAME' ! -name '.gitignore' ! -name '.' -exec rm -rf {} \;
 # # printf "\n\n\n\n\n"
-ls -lta
-# mv _site/* .
-# # rm -R _site/
+# ls -lta
+mv _site/* .
+rm -R _site/
 
 
-# # # Push to DEPLOY_BRANCH
-# git add -fA
-# git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
-# git push -f -q origin $DEPLOY_BRANCH
+# # Push to DEPLOY_BRANCH
+git add -fA
+git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
+git push -f -q origin $DEPLOY_BRANCH
 
 # Move back to SRC_BRANCH
 git checkout $SRC_BRANCH
+
+
+
+echo "Deployed successfully!"
+
+exit 0

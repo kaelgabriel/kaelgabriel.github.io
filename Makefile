@@ -19,7 +19,7 @@ build:
   # -v "$(PWD)/vendor/bundle:/usr/local/bundle" \
 # 
 
-COMMAND=./bin/deploy.bkp
+COMMAND=./bin/deploy
 check:
 	git checkout master
 	sudo docker run -it --rm \
@@ -27,6 +27,13 @@ check:
   --name $(CONTAINER_NAME) \
 	jekyll-docker $(COMMAND)
 
+
+deploy:
+	git checkout master
+	sudo docker run -it --rm \
+  -v "$(PWD):/home/appuser/myapp" -p 4000:4000 \
+  --name $(CONTAINER_NAME) \
+	jekyll-docker ./bin/deploy
 
 
 image:
