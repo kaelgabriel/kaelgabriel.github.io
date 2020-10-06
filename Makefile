@@ -21,6 +21,7 @@ build:
 
 COMMAND=./bin/deploy.bkp
 check:
+	git checkout master
 	sudo docker run -it --rm \
   -v "$(PWD):/home/appuser/myapp" -p 4000:4000 \
   --name $(CONTAINER_NAME) \
@@ -32,3 +33,6 @@ image:
 	sudo docker build --tag jekyll-docker .
 
 
+deploy-after:
+	git checkout master
+	./bin/deploy_after
