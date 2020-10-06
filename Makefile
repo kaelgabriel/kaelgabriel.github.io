@@ -19,7 +19,7 @@ build:
   # -v "$(PWD)/vendor/bundle:/usr/local/bundle" \
 # 
 
-COMMAND=jekyll build
+COMMAND=./bin/deploy
 check:
 	sudo docker run -it --rm \
   -v "$(PWD):/home/appuser/myapp" -p 4000:4000 \
