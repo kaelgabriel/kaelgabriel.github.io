@@ -8,7 +8,7 @@ serve:
 	sudo docker run -it --rm \
   -v "$(PWD):/home/appuser/myapp" -p 4000:4000 \
   --name $(CONTAINER_NAME) \
-	jekyll-docker bundle exec jekyll serve -H 0.0.0.0 --incremental
+	jekyll-docker bundle exec jekyll serve -H 0.0.0.0
 
 build:
 	sudo docker run -it --rm \
