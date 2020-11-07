@@ -3,6 +3,12 @@
 **TODO**:
  * - Figure how to make ´highlights´ have the $theme-color in the file _sass/_variables.scss
  
+
+ **Download and create the docker image**
+```bash
+$ make image
+```
+
 **Build the docker image**
 ```bash
 $ make build
@@ -11,6 +17,12 @@ $ make build
 ```bash
 $ make serve
 ```
+**Deploy to the gh-pages (after building it)**
+```bash
+$ make deploy
+$ make deploy-after
+```
+
 
 Comment this line at _includes/social.html for the mail envelope:
   <!-- <a href="mailto:{{ site.email | encode_email }}"><i class="fas fa-envelope"></i></a> -->
